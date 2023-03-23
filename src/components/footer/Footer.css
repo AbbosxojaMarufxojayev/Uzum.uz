@@ -1,0 +1,117 @@
+.footer{
+    height: 400px;
+    margin-top: 50px;
+}
+.footer__columns{
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.col-1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+.col-2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+.col-3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+.col-4{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 10px;
+}
+.img__part__foo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+}
+.img__part__foo img{
+    width: 40%;
+    cursor: pointer;
+}
+.social{
+    margin-top: 10px;
+}
+.icons__part__foo{
+    display: flex;
+    gap: 10px;
+}
+.icons__part__foo svg{
+    font-size: 27px;
+    cursor: pointer;
+}
+.ins{
+    color: violet;
+}
+.telegram{
+    color: dodgerblue;
+}
+.tube{
+    color: red;
+}
+.face{
+    color: blue;
+}
+.last__part__foo{
+    display: flex;
+    width: 100%;
+    height: 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+.left__part{
+    display: flex;
+    gap: 20px;
+}
+
+
+
+@media screen and (max-width: 1064px) {
+    .footer__columns{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 532px){
+    .footer{
+        height: auto;
+    }
+    .footer__columns{
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+    }
+    .footer__columns p{
+        text-align: center;
+    }
+}   

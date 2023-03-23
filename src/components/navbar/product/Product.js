@@ -86,7 +86,7 @@ function Product() {
             </div>
             <MdAddShoppingCart className="pro__cart"/>
           </div>
-        ))}5
+        ))}
       </div>
     </div>
   )

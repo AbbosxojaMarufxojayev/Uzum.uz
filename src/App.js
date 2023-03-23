@@ -5,6 +5,7 @@ import Home from "./router/home/Home";
 import Wishlist from "./router/wishlist/Wishlist"
 import Cart from "./router/cart/Cart"
 import Admin from "./router/admin/Admin"
+import Footer from "./components/footer/Footer";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/sevimlilar" element={<Wishlist/>}/>
         <Route path="/cart" element={<Cart/>}/>
       </Routes>
+      <Footer/>
      </div>
   );  
 }
