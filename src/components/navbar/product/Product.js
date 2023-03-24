@@ -1,7 +1,9 @@
 import React from 'react'
 import "./Product.css"
-import { BsHeart } from 'react-icons/bs';
-import {MdAddShoppingCart} from "react-icons/md"
+import { AiOutlineHeart } from "react-icons/ai"
+import { BsCart4 } from "react-icons/bs"
+
+
 function Product() {
     const DATA = [
         {
@@ -66,28 +68,30 @@ function Product() {
         },
       ];
   return (
-    <div>
-            <div className="data">
-        {DATA?.map((item, inx) => (
-          <div key={inx} className="data__item">
-            <div className="data__heart">
-              <BsHeart />
-            </div>
-            <img className='pro__img' src={item?.img} alt="" />
-            <p className='pro__title'>
-              {item?.name.length > 30
-                ? item.name.slice(0, 25) + "..."
-                : item.name}
-            </p>
-            <p className="discount">{Math.floor(item?.price / 10)} so'm/oyiga</p>
-            <div className="prices">
-            <del className='dis__price'>{item?.price + 300} so'm</del>
-            <p className='pro__price'>{item?.price}so'm</p>
-            </div>
-            <MdAddShoppingCart className="pro__cart"/>
-          </div>
-        ))}
-      </div>
+<div className='container'>
+        <div className="product__wrapper">
+            {
+                DATA?.map((item, inx)=><div className='product__card' key={inx}>
+                    <div className="pro__card-img">
+                        <AiOutlineHeart className='heart'/>
+                        <img src={item.img} alt="" />
+                    </div>
+                    <p className='pro__card-title'>{item?.title}</p>
+                    <span className='pro__card-monthly'>{Math.round((item.price * 1.4) / 12).brm()} so'm / oy</span>
+                    
+                    <div className='pro__bottom'>
+                        <div>
+                            <del>{item.price * 1.2} so'm</del>
+                            <p className='pro__card-price'>{item?.price.brm()} so'm</p>
+                        </div>
+                        <div className='pro__cart'>
+                            <BsCart4/>
+                        </div>
+                    </div>
+                </div> )
+            }
+        </div>
+        
     </div>
   )
 }
